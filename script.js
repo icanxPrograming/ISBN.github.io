@@ -21,7 +21,7 @@ isbnForm.addEventListener('submit', function (event) {
         isbnMessage.textContent = `ISBN 10 Digit : ${isbn + checkDigit}`;
     }
 
-    document.getElementById('check-digit-message').textContent = `The check digit should be: ${checkDigit}`;
+    document.getElementById('check-digit-message').textContent = `Digit Terakhir / Karakter Uji : ${checkDigit}`;
 
     // Tampilkan tombol kalkulasi ulang
     recalculateButton.hidden = false;

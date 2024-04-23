@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator ISBN Sederhana</title>
     <link rel="stylesheet" href="styles.css">
-    <link href='logo/logo.png' rel='shorcut icon'>
+    <link rel="shortcut icon" href="logo/logo.png">
 </head>
 <body>
-    <h1>Check Digit ISBN & Validasi ISBN</h1>
-    <form id="isbn-form">
-        <label for="isbn">Masukan 9 digits No ISBN:</label><br>
-        <input type="text" id="isbn" name="isbn" pattern="[0-9]{9}" required><br>
-        <button type="submit">Calculate Check Digit</button>
-    </form>
-    <div id="result" class="hidden">
-        <p id="check-digit-message"></p>
-        <p id="valid-message"></p>
-        <p id="isbn-message"></p>
-    </div>
-    <button id="recalculate-button" hidden>Calculate Again</button>
+    <header>
+        <h1>Kalkulator ISBN 10 Digit</h1>
+    </header>
+    <main>
+        <section class="calculator">
+            <h2>Check Digit ISBN & Validasi ISBN</h2>
+            <form id="isbn-form">
+                <div class="form-group">
+                    <label for="isbn">Masukkan 9 digit No ISBN:</label>
+                    <input type="text" id="isbn" name="isbn" pattern="[0-9]{9}" required>
+                </div>
+                <button type="submit">Calculate Check Digit</button>
+            </form>
+            <div id="result" class="hidden">
+                <p id="check-digit-message"></p>
+                <p id="valid-message"></p>
+                <p id="isbn-message"></p>
+            </div>
+            <button id="recalculate-button" hidden>Calculate Again</button>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

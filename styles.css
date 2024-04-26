@@ -10,9 +10,9 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background-color: #333;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-radius: 38%;
+    border-radius: 20px;
     color: #fff;
     text-align: center;
     padding: 2rem 0;
@@ -21,6 +21,14 @@ header {
 
 h1 {
     margin: 0;
+}
+
+.span1 {
+    color: rgba(244, 194, 79, 0.922);
+}
+
+.span2 {
+    color: #fff;
 }
 
 .main {

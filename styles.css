@@ -145,7 +145,7 @@ button:hover {
 
 @media only screen and (max-width: 576px) {
     body {
-        background-size: 22%; /* Ubah ukuran background image */
+        background-size: 30%; /* Ubah ukuran background image */
     }
 
     .container {
@@ -175,7 +175,7 @@ button:hover {
 
 @media only screen and (max-width: 425px) {
     body {
-        background-size: 15%; /* Ubah ukuran background image */
+        background-size: 40%; /* Ubah ukuran background image */
     }
 
     .container {

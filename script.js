@@ -14,10 +14,10 @@ isbnForm.addEventListener('submit', function (event) {
     result.classList.remove('hidden');
 
     if (isValid) {
-        document.getElementById('valid-message').textContent = 'ISBN Valid!';
+        document.getElementById('valid-message').textContent = 'ISBN ini Valid!';
         isbnMessage.textContent = `ISBN 10 Digit : ${isbn + checkDigit}`;
     } else {
-        document.getElementById('valid-message').textContent = 'ISBN Tidak Valid!';
+        document.getElementById('valid-message').textContent = 'ISBN ini Tidak Valid!';
         isbnMessage.textContent = `ISBN 10 Digit : ${isbn + checkDigit}`;
     }
 

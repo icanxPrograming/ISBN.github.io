@@ -8,10 +8,8 @@
     <link rel="shortcut icon" href="logo/img2.jpg">
 </head>
 <body>
-    <header>
-        <h1><span class="span1">Kalkulator ISBN</span> <span class="span2">10 Digit</span></h1>
-    </header>
-    <main>
+    <div class="container">
+        <h1 class="wrapper"><em>Program Kalkulator ISBN 10 Digit</em></h1>
         <section class="calculator">
             <h2>Check Digit ISBN & Validasi ISBN</h2>
             <form id="isbn-form">
@@ -22,13 +20,14 @@
                 <button type="submit">Calculate Check Digit</button>
             </form>
             <div id="result" class="hidden">
-                <p id="check-digit-message"></p>
-                <p id="valid-message"></p>
-                <p id="isbn-message"></p>
+                <p id="check-digit-message" class="checkdigit"></p>
+                <p id="valid-message" class="validasi"></p>
+                <p id="isbn-message" class="isbn10"></p>
             </div>
             <button id="recalculate-button" hidden>Calculate Again</button>
         </section>
-    </main>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

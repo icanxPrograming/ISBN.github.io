@@ -7,67 +7,89 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-image: url(logo/teknik\ unsur1.png);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: top center;
 }
 
-header {
-    background-color: #333;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border-radius: 20px;
-    color: #fff;
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.wrapper {
     text-align: center;
-    padding: 2rem 0;
-    margin-right: 2rem;
+    margin-top: 0;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
 }
 
-h1 {
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+footer p {
     margin: 0;
 }
 
-.span1 {
-    color: rgba(244, 194, 79, 0.922);
-}
-
-.span2 {
-    color: #fff;
-}
-
-.main {
+.calculator {
     background-color: #fff;
-    padding: 2rem;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
+    width: 500px;
+    text-align: center;
 }
 
 .calculator h2 {
     color: #007bff;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 2px;
 }
 
 input[type="text"] {
-    width: 100%;
-    padding: 0.5rem;
+    width: 50%;
+    padding: 10px;
     border-radius: 4px;
     border: 1px solid #ccc;
 }
 
 button {
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    text-align: center;
 }
 
 button:hover {
@@ -78,6 +100,105 @@ button:hover {
     display: none;
 }
 
-#result {
-    margin-top: 2rem;
+.checkdigit {
+    font-weight: bold;
+}
+
+.validasi {
+    font-weight: bold;
+}
+
+.isbn10 {
+    font-weight: bold;
+}
+
+/* Untuk layar berukuran kecil */
+@media only screen and (max-width: 768px) {
+    body {  
+        background-size: 18%; /* Ubah ukuran background image */
+    }
+
+    .container {
+        max-width: 90%; /* Sesuaikan lebar kontainer */
+        padding: 10px; /* Tambahkan padding untuk memberi ruang di sekitar kontainer */
+    }
+
+    .wrapper {
+        font-size: 1.2em; /* Sesuaikan ukuran font untuk judul */
+    }
+
+    .calculator {
+        width: 90%; /* Sesuaikan lebar kalkulator */
+        padding: 15px; /* Tambahkan padding untuk memberi ruang di sekitar kalkulator */
+    }
+
+    input[type="text"] {
+        width: 80%; /* Sesuaikan lebar input */
+        margin: 0 auto; /* Pusatkan input di dalam kontainer */
+    }
+
+    button {
+        width: 80%; /* Sesuaikan lebar tombol */
+        margin: 10px auto; /* Pusatkan tombol di dalam kontainer dan beri ruang di atas dan bawah */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    body {
+        background-size: 22%; /* Ubah ukuran background image */
+    }
+
+    .container {
+        max-width: 90%; /* Sesuaikan lebar kontainer */
+        padding: 10px; /* Tambahkan padding untuk memberi ruang di sekitar kontainer */
+    }
+
+    .wrapper {
+        font-size: 1em; /* Sesuaikan ukuran font untuk judul */
+    }
+
+    .calculator {
+        width: 90%; /* Sesuaikan lebar kalkulator */
+        padding: 15px; /* Tambahkan padding untuk memberi ruang di sekitar kalkulator */
+    }
+
+    input[type="text"] {
+        width: 80%; /* Sesuaikan lebar input */
+        margin: 0 auto; /* Pusatkan input di dalam kontainer */
+    }
+
+    button {
+        width: 80%; /* Sesuaikan lebar tombol */
+        margin: 10px auto; /* Pusatkan tombol di dalam kontainer dan beri ruang di atas dan bawah */
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        background-size: 15%; /* Ubah ukuran background image */
+    }
+
+    .container {
+        max-width: 90%; /* Sesuaikan lebar kontainer */
+        padding: 10px; /* Tambahkan padding untuk memberi ruang di sekitar kontainer */
+    }
+
+    .wrapper {
+        font-size: 1em; /* Sesuaikan ukuran font untuk judul */
+    }
+
+    .calculator {
+        width: 90%; /* Sesuaikan lebar kalkulator */
+        padding: 15px; /* Tambahkan padding untuk memberi ruang di sekitar kalkulator */
+    }
+
+    input[type="text"] {
+        width: 80%; /* Sesuaikan lebar input */
+        margin: 0 auto; /* Pusatkan input di dalam kontainer */
+    }
+
+    button {
+        width: 80%; /* Sesuaikan lebar tombol */
+        margin: 10px auto; /* Pusatkan tombol di dalam kontainer dan beri ruang di atas dan bawah */
+    }
 }

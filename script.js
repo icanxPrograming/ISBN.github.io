@@ -3,6 +3,8 @@ const isbnInput = document.getElementById('isbn');
 const recalculateButton = document.getElementById('recalculate-button');
 const result = document.getElementById('result');
 const isbnMessage = document.getElementById('isbn-message');
+const heading = document.querySelector('h1');
+const body = document.querySelector('body');
 
 isbnForm.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -23,6 +25,10 @@ isbnForm.addEventListener('submit', function (event) {
 
     document.getElementById('check-digit-message').textContent = `Digit Terakhir / Karakter Uji : ${checkDigit}`;
 
+    // Sembunyikan heading dan background image
+    heading.style.display = 'none';
+    body.style.backgroundImage = 'none';
+
     // Tampilkan tombol kalkulasi ulang
     recalculateButton.hidden = false;
 });
@@ -35,6 +41,10 @@ recalculateButton.addEventListener('click', function () {
     // Tampilkan input ISBN dan fokus ke input
     isbnInput.value = '';
     isbnInput.focus();
+
+    // Tampilkan kembali heading dan background image
+    heading.style.display = 'block';
+    body.style.backgroundImage = 'url("logo/teknik unsur1.png")';
 });
 
 function calculateCheckDigit(isbn) {

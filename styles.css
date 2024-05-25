@@ -55,7 +55,6 @@ body {
     margin-right: 0; /* Hapus margin kanan pada section terakhir agar tidak berdempetan */
 }
 
-
 .calculator h2 {
     color: #007bff;
     margin-bottom: 20px;
@@ -153,7 +152,7 @@ button:hover {
 @media only screen and (max-width: 576px) {
     body {
         background-size: 18%; /* Ubah ukuran background image */
-        /* background-image: none; */
+        background-image: none; /* Hilangkan background image */
     }
 
     .note {
@@ -161,6 +160,9 @@ button:hover {
     }
 
     .container {
+        flex-direction: column; /* Ubah arah flex menjadi kolom */
+        justify-content: center; /* Pastikan section tetap berada di tengah */
+        align-items: center; /* Pusatkan section secara horizontal */
         max-width: 90%; /* Sesuaikan lebar kontainer */
         padding: 10px; /* Tambahkan padding untuk memberi ruang di sekitar kontainer */
     }
@@ -172,6 +174,7 @@ button:hover {
     .calculator {
         width: 90%; /* Sesuaikan lebar kalkulator */
         padding: 15px; /* Tambahkan padding untuk memberi ruang di sekitar kalkulator */
+        margin-right: 0; /* Hilangkan margin kanan */
     }
 
     .calculator h2 {
@@ -192,7 +195,7 @@ button:hover {
 @media only screen and (max-width: 425px) {
     body {
         background-size: 40%; /* Ubah ukuran background image */
-        background-image: none;
+        background-image: none; /* Hilangkan background image */
     }
 
     .container {

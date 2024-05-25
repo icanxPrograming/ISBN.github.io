@@ -9,12 +9,14 @@ body {
     margin: 0;
     background-image: url(logo/teknik\ unsur1.png);
     background-repeat: no-repeat;
-    background-size: 10%;
+    background-size: 100px;
     background-position: top center;
 }
 
 .container {
-    max-width: 600px;
+    display: flex;
+    justify-content: space-between; /* Membuat kedua section berada di ujung kiri dan kanan */
+    max-width: 1000px; /* Sesuaikan lebar maksimum kontainer */
     margin: 0 auto;
     padding: 20px;
 }
@@ -37,30 +39,28 @@ body {
     to { width: 100% }
 }
 
-footer {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
 .calculator {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 45%; /* Sesuaikan lebar masing-masing section */
     text-align: center;
+    margin-bottom: 20px; /* Tambahkan margin bawah agar tidak berdempetan */
+    margin-right: 20px; /* Tambahkan margin kanan agar terpisah dari section sebelahnya */
 }
+
+/* Style untuk section ISBN 13 digit */
+.calculator:last-child {
+    margin-right: 0; /* Hapus margin kanan pada section terakhir agar tidak berdempetan */
+}
+
 
 .calculator h2 {
     color: #007bff;
     margin-bottom: 20px;
     text-align: center;
+    font-size: 1.5em;
 }
 
 .form-group {
@@ -109,14 +109,20 @@ button:hover {
     font-weight: bold;
 }
 
-.isbn10 {
+.isbn10,
+.isbn13 {
     font-weight: bold;
+    color: #007bff;
 }
 
 /* Untuk layar berukuran kecil */
 @media only screen and (max-width: 768px) {
     body {  
         background-size: 18%; /* Ubah ukuran background image */
+    }
+
+    .note {
+        font-size: 0.8rem;
     }
 
     .container {
@@ -146,7 +152,12 @@ button:hover {
 
 @media only screen and (max-width: 576px) {
     body {
-        background-size: 30%; /* Ubah ukuran background image */
+        background-size: 18%; /* Ubah ukuran background image */
+        /* background-image: none; */
+    }
+
+    .note {
+        font-size: 0.6rem;
     }
 
     .container {
@@ -161,6 +172,10 @@ button:hover {
     .calculator {
         width: 90%; /* Sesuaikan lebar kalkulator */
         padding: 15px; /* Tambahkan padding untuk memberi ruang di sekitar kalkulator */
+    }
+
+    .calculator h2 {
+        font-size: 1.1rem;
     }
 
     input[type="text"] {
@@ -177,6 +192,7 @@ button:hover {
 @media only screen and (max-width: 425px) {
     body {
         background-size: 40%; /* Ubah ukuran background image */
+        background-image: none;
     }
 
     .container {
@@ -191,6 +207,10 @@ button:hover {
     .calculator {
         width: 90%; /* Sesuaikan lebar kalkulator */
         padding: 15px; /* Tambahkan padding untuk memberi ruang di sekitar kalkulator */
+    }
+
+    .calculator h2 {
+        font-size: 1rem;
     }
 
     input[type="text"] {

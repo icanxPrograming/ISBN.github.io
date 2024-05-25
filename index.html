@@ -9,23 +9,49 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="wrapper"><em>Program Kalkulator ISBN 10 Digit</em></h1>
+        <!-- ISBN 10 DIGIT START-->
         <section class="calculator">
-            <h2>Check Digit ISBN & Validasi ISBN</h2>
-            <form id="isbn-form">
+            <h1 class="wrapper"><em>10 digit ISBN calculator</em></h1>
+            <p class="note">Note : (Jika ingin konversi dari 13 ke 10, Cukup hilangkan karakter uji dan EAN Prefix nya.)
+                <br>Contoh : 978-123456789-X -> 123456789</p>
+            <h2>Check Digit & Validasi ISBN 10 Digit</h2>
+            <form id="isbn10-form">
                 <div class="form-group">
-                    <label for="isbn">Masukkan 9 digit No ISBN :</label>
-                    <input type="text" id="isbn" name="isbn" pattern="[0-9]{9}" required>
+                    <label for="isbn10">Masukkan 9 digit No ISBN :</label>
+                    <input type="text" id="isbn10" name="isbn10" pattern="[0-9]{9}" required>
                 </div>
                 <button type="submit">Calculate Check Digit</button>
             </form>
-            <div id="result" class="hidden">
-                <p id="check-digit-message" class="checkdigit"></p>
-                <p id="valid-message" class="validasi"></p>
-                <p id="isbn-message" class="isbn10"></p>
+            <div id="result10" class="hidden">
+                <p id="check-digit-message10" class="checkdigit"></p>
+                <p id="valid-message10" class="validasi"></p>
+                <p id="isbn-message10" class="isbn10"></p>
             </div>
-            <button id="recalculate-button" hidden>Calculate Again</button>
+            <button id="recalculate-button10" hidden>Calculate Again</button>
         </section>
+        <!-- ISBN 10 DIGIT END -->
+        
+        <!-- ISBN 13 DIGIT START-->
+        <section class="calculator">
+            <h1 class="wrapper"><em>13 digit ISBN calculator</em></h1>
+            <p class="note">Note : (Jika ingin konversi dari 10 ke 13, Cukup hilangkan karakter uji dan Tambahkan EAN Prefix nya.)
+                <br>Contoh : 123456789-X -> 978-123456789</p>
+            <h2>Check Digit & Validasi ISBN 13 Digit</h2>
+            <form id="isbn13-form">
+                <div class="form-group">
+                    <label for="isbn13">Masukkan 12 digit No ISBN :</label>
+                    <input type="text" id="isbn13" name="isbn13" pattern="[0-9]{12}" required>
+                </div>
+                <button type="submit">Calculate Check Digit</button>
+            </form>
+            <div id="result13" class="hidden">
+                <p id="check-digit-message13" class="checkdigit"></p>
+                <p id="valid-message13" class="validasi"></p>
+                <p id="isbn-message13" class="isbn13"></p>
+            </div>
+            <button id="recalculate-button13" hidden>Calculate Again</button>
+        </section>
+        <!-- ISBN 13 DIGIT END -->
     </div>
 
     <script src="script.js"></script>

@@ -152,7 +152,7 @@ button:hover {
 @media only screen and (max-width: 576px) {
     body {
         background-size: 18%; /* Ubah ukuran background image */
-        background-image: none; /* Hilangkan background image */
+        /* background-image: none; Hilangkan background image */
     }
 
     .note {
